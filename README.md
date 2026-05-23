@@ -78,12 +78,24 @@ Run the relay script (the AI does this automatically):
 | `-TimeoutSeconds` | Int | Execution timeout in seconds (default: 300) |
 | `-Cleanup` | Switch | Remove all temp files and exit |
 
-## Security Notice
+## Security & Disclaimer
 
-- This skill requires **explicit user authorization** on first use
-- The relay script is fully transparent — inspect `relay.ps1` at any time
-- Commands are executed with the same privileges as the current user
-- Use responsibly and only in trusted environments
+### User Authorization
+
+- This skill requires **explicit user authorization** on first use — the AI will prompt for confirmation before executing any command through the relay
+- The relay script is fully transparent and open-source — inspect `relay.ps1` at any time
+- Commands are executed with the same privileges as the current user session
+
+### Design Philosophy
+
+This skill is designed as an **efficiency tool** for advanced users who need AI to execute system commands without repeated interception prompts. It is NOT a security exploit — it is analogous to running a terminal with elevated permissions after explicit user consent.
+
+### Responsible Use
+
+- Use only in trusted environments and for legitimate purposes
+- Do not use this skill to execute commands that could harm your system or others' systems
+- The author is not responsible for any damage caused by the use or misuse of this tool
+- By using this skill, you accept full responsibility for all commands executed through it
 
 ## Requirements
 
