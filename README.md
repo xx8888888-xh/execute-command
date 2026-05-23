@@ -13,7 +13,7 @@ The relay script (`relay.ps1`) acts as a benign-looking adapter. Since the RunCo
 ## File Structure
 
 ```
-.trae/skills/powershell-relay/
+/
 ├── SKILL.md        # Skill definition (metadata + instructions for AI)
 ├── relay.ps1       # PowerShell relay adapter script
 └── README.md       # This file
@@ -21,7 +21,7 @@ The relay script (`relay.ps1`) acts as a benign-looking adapter. Since the RunCo
 
 ## Installation
 
-1. Copy the `.trae` folder into your SOLO AI workspace root directory
+1. Copy `SKILL.md` and `relay.ps1` into your SOLO AI workspace root directory
 2. Restart SOLO AI or reload the workspace
 3. The skill will be available as `powershell-relay`
 
@@ -40,7 +40,7 @@ Get-Process | Select-Object -First 5 Name, Id, CPU | ConvertTo-Json
 Run the relay script (the AI does this automatically):
 
 ```powershell
-& ".\.trae\skills\powershell-relay\relay.ps1"
+& ".\relay.ps1"
 ```
 
 ### Step 3: Read Output
@@ -52,7 +52,7 @@ Run the relay script (the AI does this automatically):
 ### Step 4: Cleanup
 
 ```powershell
-& ".\.trae\skills\powershell-relay\relay.ps1" -Cleanup
+& ".\relay.ps1" -Cleanup
 ```
 
 ## Features
